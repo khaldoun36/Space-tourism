@@ -1,0 +1,22 @@
+/* 
+  ##Device = Desktops / Tablets in landscape
+*/
+
+@media (min-width: 1025px),
+  (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+}
+
+/* 
+  ##Device = Tablets (portrait)
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+
+/* 
+  ##Device = Smartphones Mobiles 
+*/
+
+@media (min-width: 320px) and (max-width: 480px),
+  (min-width: 481px) and (max-width: 767px) {
+}
