@@ -7,7 +7,6 @@
     <button
       class="menu"
       aria-controls="primary-navigation"
-      :aria-expanded="isOpen"
       :class="{ opened: isOpen }"
       @click="toggleMenu"
     >
@@ -24,7 +23,7 @@
       </svg>
     </button>
     <!-- Mobile Button end -->
-    <nav class="primary-nav flex underline-indicators">
+    <nav class="primary-nav flex underline-indicators" :aria-expanded="isOpen">
       <router-link
         to="/"
         class="ff-sans-cond fs-400 fw-400 letter-spacing-2 text-white uppercase"
@@ -150,7 +149,7 @@ const toggleMenu = () => {
   ##Device = Smartphones Mobiles
 */
 
-@media (min-width: 320px) and (max-width: 480px),
+@media (min-width: 220px) and (max-width: 480px),
   (min-width: 481px) and (max-width: 767px) {
   .primary-header {
     align-items: center;
@@ -163,17 +162,22 @@ const toggleMenu = () => {
     flex-direction: column;
     padding-block: var(--size-fluid-8);
     transform: translateX(100%);
+    transition: transform 350ms ease-in-out;
   }
-
+  .primary-nav[aria-expanded="true"] {
+    transform: translateX(0);
+  }
   /* Hamburger Menu Icon  */
   .menu {
     background-color: transparent;
+    z-index: 2000;
     border: none;
     cursor: pointer;
     display: flex;
     padding: 0;
     transform: scale(0.65);
   }
+
   .line {
     fill: none;
     stroke: hsl(var(--clr-white));

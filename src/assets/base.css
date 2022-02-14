@@ -18,14 +18,45 @@
   --ff-sans-cond: "Barlow Condensed", sans-serif;
   --ff-sans-normal: "Barlow", sans-serif;
 
-  /* font-size */
-  --fs-900: 9.375rem;
-  --fs-800: 6.25rem;
-  --fs-700: 3.5rem;
-  --fs-600: 2rem;
-  --fs-500: 1.75rem;
-  --fs-400: 1rem;
-  --fs-300: 0.875rem;
+  /* font-sizes */
+  --fS-900: clamp(5rem, 10vw + 1rem, 9.375rem);
+  --fS-800: 3.5rem;
+  --fS-700: 1.5rem;
+  --fS-600: 1rem;
+  --fS-500: var(--font-size-1);
+  --fS-400: 0.9375rem;
+  --fS-300: 1rem;
+  --fS-200: 0.875rem;
+}
+
+/* 
+  ##Device = Tablets (portrait)
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  :root {
+    --fS-800: 5rem;
+    --fS-700: 2.5rem;
+    --fS-600: 1.5rem;
+    --fS-500: var(--font-size-3);
+    --fS-400: 1rem;
+  }
+}
+
+/* 
+  ##Device = Desktops / Tablets in landscape
+*/
+
+@media (min-width: 1025px),
+  (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  :root {
+    /* font-sizes */
+    --fS-800: 6.25rem;
+    --fS-700: 3.5rem;
+    --fS-600: 2rem;
+    --fS-500: var(--font-size-5);
+    --fS-400: 1.125rem;
+  }
 }
 
 /* ------------------ */
@@ -58,25 +89,25 @@
 
 /* font-size */
 .fs-900 {
-  font-size: var(--fs-900);
+  font-size: var(--fS-900);
 }
 .fs-800 {
-  font-size: var(--fs-800);
+  font-size: var(--fS-800);
 }
 .fs-700 {
-  font-size: var(--fs-700);
+  font-size: var(--fS-700);
 }
 .fs-600 {
-  font-size: var(--fs-600);
+  font-size: var(--fS-600);
 }
 .fs-500 {
-  font-size: var(--fs-500);
+  font-size: var(--fS-500);
 }
 .fs-400 {
-  font-size: var(--fs-400);
+  font-size: var(--fS-400);
 }
 .fs-300 {
-  font-size: var(--fs-300);
+  font-size: var(--fS-300);
 }
 
 /* font-weight */
@@ -91,10 +122,10 @@
 .ff-sans {
   font-family: var(--ff-sans-normal);
 }
-.fs-sans-cond {
+.ff-sans-cond {
   font-family: var(--ff-sans-cond);
 }
-.fs-serif {
+.ff-serif {
   font-family: var(--ff-serif);
 }
 
@@ -104,7 +135,7 @@
 .letter-spacing-2 {
   letter-spacing: 2.7px;
 }
-.letter-spacing-4 {
+.letter-spacing-3 {
   letter-spacing: 4.75px;
 }
 
@@ -126,6 +157,9 @@
   display: flex;
 }
 
+.d-block {
+  display: block;
+}
 /* ------------------ */
 /* Components         */
 /* ------------------ */
@@ -143,4 +177,50 @@
 
 .underline-indicators > .router-link-exact-active {
   border-color: hsl(var(--clr-white) / 1);
+}
+
+/* ------------------ */
+/* Layout             */
+/* ------------------ */
+
+.grid-container {
+  display: grid;
+  place-items: center;
+  padding-inline: 1rem;
+  padding-bottom: 4rem;
+}
+
+.grid-container p:not([class]) {
+  max-width: 50ch;
+}
+
+/* 
+  ##Device = Desktops / Tablets in landscape
+*/
+@media (min-width: 1025px),
+  (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .grid-container {
+    text-align: left;
+    column-gap: var(--container-gap, 2rem);
+    grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(
+        1rem,
+        1fr
+      );
+  }
+}
+
+/* 
+  ##Device = Tablets (portrait)
+*/
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+
+/* 
+  ##Device = Smartphones Mobiles 
+*/
+@media (min-width: 320px) and (max-width: 480px),
+  (min-width: 481px) and (max-width: 767px) {
+  .grid-container {
+    text-align: center;
+  }
 }
