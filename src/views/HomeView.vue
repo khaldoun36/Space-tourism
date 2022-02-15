@@ -1,6 +1,6 @@
 <template>
   <main class="grid-container grid-container--home">
-    <div>
+    <div class="flow">
       <h1
         class="text-light fs-500 fw-400 ff-sans-cond uppercase letter-spacing-3"
       >
@@ -14,16 +14,25 @@
         experience!
       </p>
     </div>
-    <div></div>
+
+    <div>
+      <LargeButton />
+    </div>
   </main>
 </template>
 
-<script setup></script>
+<script setup>
+import LargeButton from "../components/shared/LargeButton.vue";
+</script>
 
 <style>
 /* 
   ##Device = Smartphones Mobiles 
 */
+.grid-container--home {
+  --flow-space: var(--size-3);
+}
+
 .grid-container--home > .first-child > h1 {
   text-align: center !important;
 }
@@ -42,15 +51,17 @@
   .grid-container--home {
     padding-bottom: max(6rem, 20vh);
     align-items: end;
+    justify-content: space-between;
   }
 
   .grid-container--home > *:first-child {
-    grid-column: 2;
-    min-width: 100%;
+    grid-column: 2 / span 1;
+    justify-self: start;
   }
 
   .grid-container--home > *:last-child {
-    grid-column: 3;
+    grid-column: 3 / span 1;
+    justify-self: end;
   }
 }
 </style>

@@ -80,7 +80,7 @@ window.addEventListener("resize", () => {
 
 #app {
   font-family: var(--ff-sans-normal);
-  font-size: var(--fs-400);
+  font-size: var(--fS-400);
   line-height: var(--font-lineheight-4);
 }
 
