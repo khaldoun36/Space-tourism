@@ -34,14 +34,9 @@ import LargeButton from "../components/shared/LargeButton.vue";
 }
 
 .grid-container--home > .first-child > h1 {
-  text-align: center !important;
+  text-align: center;
 }
-/* 
-  ##Device = Tablets (portrait)
-*/
 
-@media (min-width: 768px) and (max-width: 1024px) {
-}
 /* 
   ##Device = Desktops / Tablets in landscape
 */
