@@ -107,7 +107,6 @@ const changeDestination = (item) => {
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
   .grid-container--destination {
     padding-top: var(--size-7);
-    overflow: hidden;
   }
   .grid-container--destination > h1 {
     justify-self: start;

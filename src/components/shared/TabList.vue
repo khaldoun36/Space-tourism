@@ -55,10 +55,15 @@ const handleClick = (e) => {
 
 <style>
 .tab-list {
-  padding: 0;
+  /* padding: 0; */
+  justify-content: space-between;
+  align-items: center;
 }
 .tab-list > button {
   /* border: none; */
   background-color: transparent;
+}
+.tab-list > button:not(:last-child) {
+  margin-right: min(2rem, 3rem);
 }
 </style>
