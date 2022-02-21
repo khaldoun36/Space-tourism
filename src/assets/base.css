@@ -213,6 +213,20 @@
   max-width: 50ch;
 }
 
+/* ------------------ */
+/* Accessibility      */
+/* ------------------ */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
+}
 /* 
   ##Device = Desktops / Tablets in landscape
 */
@@ -221,7 +235,7 @@
   .grid-container {
     text-align: left;
     column-gap: var(--container-gap, 2rem);
-    grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(
+    grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(
         1rem,
         1fr
       );
