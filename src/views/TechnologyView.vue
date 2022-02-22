@@ -31,7 +31,7 @@
 </template>
 
 <script setup>
-import { ref, watch, watchEffect } from "vue";
+import { ref } from "vue";
 import NumberedDots from "../components/shared/NumberedDots.vue";
 import getBackgroundSize from "../composables/getBackgroundSize";
 import technology from "../data/technologyData";
@@ -40,6 +40,18 @@ import technology from "../data/technologyData";
 const singleTech = ref(technology[0]);
 
 const image = ref("");
+
+// change the selected numberd dots based on user choice
+const changeTechDetails = (item) => {
+  singleTech.value = technology.find((unit) => {
+    return unit.name.trim().toLowerCase() === item.toLowerCase();
+  });
+  if (backgroundSize.value === "desktop") {
+    image.value = singleTech.value.images.portrait;
+  } else {
+    image.value = singleTech.value.images.landscape;
+  }
+};
 
 const backgroundSize = ref(
   getBackgroundSize(window.innerWidth, window.innerHeight)
@@ -66,13 +78,6 @@ window.addEventListener("resize", () => {
     image.value = singleTech.value.images.landscape;
   }
 });
-
-// change the selected numberd dots based on user choice
-const changeTechDetails = (item) => {
-  singleTech.value = technology.find((unit) => {
-    return unit.name.trim().toLowerCase() === item.toLowerCase();
-  });
-};
 </script>
 
 <style scoped>
