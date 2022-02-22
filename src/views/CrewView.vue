@@ -7,14 +7,8 @@
     </h1>
     <!-- crew images -->
     <picture class="crew-image">
-      <source
-        :srcset="`src/assets/crew/image-${crewImage.trim()}.webp`"
-        type="image/webp"
-      />
-      <img
-        :src="`src/assets/crew/image-${crewImage.trim()}.png`"
-        alt="Douglas Hurley"
-      />
+      <source :srcset="crewMember.images.webp" type="image/webp" />
+      <img :src="crewMember.images.png" :alt="crewMember.name" />
     </picture>
     <!-- Dot Indicators to navigate between listings -->
     <DotList @selectDot="changeCrew" class="dot-selector" />
@@ -51,26 +45,11 @@ import crew from "../data/crewData";
 // define a default crew member
 const crewMember = ref(crew[0]);
 
-// shenanigans to let me dynamically change the the crew member image (start)
-let splittedName = ref(crewMember.value.name.split(/\s+/));
-
-let crewImage = ref(
-  splittedName.value[0].toLowerCase() +
-    "-" +
-    splittedName.value[1].toLowerCase()
-);
-// shenanigans to let me dynamically change the the crew member image (end)
-
 // change the crew member details based on emitted choice from the DotList
 const changeCrew = (item) => {
   crewMember.value = crew.find((member) => {
     return member.role.trim().toLowerCase() === item.trim().toLowerCase();
   });
-  splittedName.value = crewMember.value.name.split(/\s+/);
-  crewImage.value =
-    splittedName.value[0].toLowerCase() +
-    "-" +
-    splittedName.value[1].toLowerCase();
 };
 </script>
 

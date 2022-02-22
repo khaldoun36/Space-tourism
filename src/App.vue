@@ -41,7 +41,6 @@ const pathName = ref("home");
 watch(
   () => route.name,
   () => {
-    console.log(`MyCoolComponent - watch route.name changed to ${route.name}`);
     pathName.value = route.name;
     image.value = `src/assets/${pathName.value}/background-${pathName.value}-${backgroundSize.value}.jpg`;
   }

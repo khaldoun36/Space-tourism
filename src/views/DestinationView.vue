@@ -138,7 +138,8 @@ const changeDestination = (item) => {
   }
 
   .grid-container--destination > .tab-list,
-  .grid-container--destination > .destination-image {
+  .grid-container--destination > .destination-image,
+  .grid-container--destination > .destination-info {
     justify-self: start;
   }
   .grid-container--destination > h1 {

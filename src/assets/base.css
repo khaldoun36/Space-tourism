@@ -164,8 +164,20 @@
   display: block;
 }
 
+/* to add spacing between elements (excluding the first element) */
 .flow > *:where(:not(:first-child)) {
   margin-top: var(--flow-space, 1rem);
+}
+
+/* To extend elements beyoned their container */
+.fullWidth {
+  left: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  max-width: 100vw;
+  position: relative;
+  right: 50%;
+  width: 100vw;
 }
 /* ------------------ */
 /* Components         */
@@ -205,8 +217,8 @@
   display: grid;
   place-items: center;
   text-align: center;
-  padding-inline: 1rem;
-  padding-bottom: 4rem;
+  padding-inline: 1em;
+  padding-bottom: 3rem;
 }
 
 .grid-container p {
@@ -235,6 +247,7 @@
   .grid-container {
     text-align: left;
     column-gap: var(--container-gap, 2rem);
+    padding-inline: 0;
     grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(
         1rem,
         1fr
