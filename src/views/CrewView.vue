@@ -39,7 +39,7 @@
 
 <script setup>
 import { ref } from "vue";
-import DotList from "../components/shared/DotList.vue";
+import DotList from "../components/DotList.vue";
 import crew from "../data/crewData";
 
 // define a default crew member

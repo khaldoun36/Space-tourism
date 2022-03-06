@@ -49,6 +49,7 @@ const handleClick = (e) => {
 }
 
 .numbered-dots > button {
+  cursor: pointer;
   display: inline-grid;
   place-items: center;
   padding: 0 1.5em;

@@ -32,7 +32,7 @@
 
 <script setup>
 import { ref } from "vue";
-import NumberedDots from "../components/shared/NumberedDots.vue";
+import NumberedDots from "../components/NumberedDots.vue";
 import getBackgroundSize from "../composables/getBackgroundSize";
 import technology from "../data/technologyData";
 

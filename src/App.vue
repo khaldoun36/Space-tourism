@@ -14,7 +14,7 @@
 /* ---------- */
 import { ref, watch } from "vue";
 import { useRoute } from "vue-router";
-import PrimaryHeader from "./components/shared/PrimaryHeader.vue";
+import PrimaryHeader from "./components/PrimaryHeader.vue";
 import getBackgroundSize from "./composables/getBackgroundSize.js";
 
 /* ---------- */

@@ -52,7 +52,7 @@
 
 <script setup>
 import { ref } from "vue";
-import TabList from "../components/shared/TabList.vue";
+import TabList from "../components/TabList.vue";
 import destinations from "../data/destinationsData";
 
 // define the default destination (moon)

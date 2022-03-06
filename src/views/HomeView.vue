@@ -22,7 +22,7 @@
 </template>
 
 <script setup>
-import LargeButton from "../components/shared/LargeButton.vue";
+import LargeButton from "../components/LargeButton.vue";
 </script>
 
 <style>
