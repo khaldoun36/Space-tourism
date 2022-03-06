@@ -90,7 +90,7 @@ window.addEventListener("resize", () => {
   }
 }
 
-/* 
+/*
   ##Device = Tablets (portrait)
 */
 
