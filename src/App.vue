@@ -42,7 +42,7 @@ watch(
   () => route.name,
   () => {
     pathName.value = route.name;
-    image.value = `/src/assets/${pathName.value}/background-${pathName.value}-${backgroundSize.value}.jpg`;
+    image.value = `../public/${pathName.value}/background-${pathName.value}-${backgroundSize.value}.jpg`;
   }
 );
 
@@ -63,7 +63,7 @@ window.addEventListener("resize", () => {
     viewportHeight.value
   );
 
-  image.value = `./assets/${pathName.value}/background-${pathName.value}-${backgroundSize.value}.jpg`;
+  image.value = `../public/${pathName.value}/background-${pathName.value}-${backgroundSize.value}.jpg`;
 });
 </script>
 
