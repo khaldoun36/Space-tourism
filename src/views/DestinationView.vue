@@ -8,11 +8,12 @@
     <!-- Destination Image -->
     <picture class="destination-image">
       <source
-        :srcset="`src/assets/destination/image-${destination.name.toLocaleLowerCase()}.webp`"
+        :srcset="`../../public/destination/image-${destination.name.toLocaleLowerCase()}.webp`"
         type="image/webp"
       />
+
       <img
-        :src="`src/assets/destination/image-${destination.name.toLocaleLowerCase()}.png`"
+        :src="`../../public/destination/image-${destination.name.toLocaleLowerCase()}.png`"
         :alt="`the ${destination.name.toLocaleLowerCase()}`"
       />
     </picture>

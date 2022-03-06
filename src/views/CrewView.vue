@@ -52,8 +52,6 @@ const changeCrew = (item) => {
     return member.role.trim().toLowerCase() === item.trim().toLowerCase();
   });
 };
-
-console.log(crewMember.value.images.png.trim());
 </script>
 
 <style>
