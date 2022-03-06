@@ -42,7 +42,7 @@ watch(
   () => route.name,
   () => {
     pathName.value = route.name;
-    image.value = `src/assets/${pathName.value}/background-${pathName.value}-${backgroundSize.value}.jpg`;
+    image.value = `/src/assets/${pathName.value}/background-${pathName.value}-${backgroundSize.value}.jpg`;
   }
 );
 

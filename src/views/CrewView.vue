@@ -7,8 +7,9 @@
     </h1>
     <!-- crew images -->
     <picture class="crew-image">
-      <source :srcset="crewMember.images.webp" type="image/webp" />
-      <img :src="crewMember.images.png" :alt="crewMember.name" />
+      <source :srcset="crewMember.images.webp.trim()" type="image/webp" />
+
+      <img :src="crewMember.images.png.trim()" :alt="crewMember.name" />
     </picture>
     <!-- Dot Indicators to navigate between listings -->
     <DotList @selectDot="changeCrew" class="dot-selector" />
@@ -51,6 +52,8 @@ const changeCrew = (item) => {
     return member.role.trim().toLowerCase() === item.trim().toLowerCase();
   });
 };
+
+console.log(crewMember.value.images.png.trim());
 </script>
 
 <style>
