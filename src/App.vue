@@ -42,7 +42,7 @@ watch(
   () => route.name,
   () => {
     pathName.value = route.name;
-    image.value = `./src/assets/backgrounds/${pathName.value}/background-${pathName.value}-${backgroundSize.value}.jpg`;
+    image.value = `../src/assets/backgrounds/${pathName.value}/background-${pathName.value}-${backgroundSize.value}.jpg`;
   }
 );
 
@@ -63,7 +63,8 @@ window.addEventListener("resize", () => {
     viewportHeight.value
   );
 
-  image.value = `./src/assets/backgrounds/${pathName.value}/background-${pathName.value}-${backgroundSize.value}.jpg`;
+  image.value = `../src/assets/backgrounds/${pathName.value}/background-${pathName.value}-${backgroundSize.value}.jpg`;
+  //   background-image: url(./assets/backgrounds/destination/background-destination-desktop.jpg);
 });
 </script>
 
