@@ -63,7 +63,7 @@ window.addEventListener("resize", () => {
     viewportHeight.value
   );
 
-  image.value = `src/assets/${pathName.value}/background-${pathName.value}-${backgroundSize.value}.jpg`;
+  image.value = `./assets/${pathName.value}/background-${pathName.value}-${backgroundSize.value}.jpg`;
 });
 </script>
 

@@ -7,9 +7,15 @@
     </h1>
     <!-- crew images -->
     <picture class="crew-image">
-      <source :srcset="crewMember.images.webp.trim()" type="image/webp" />
+      <source
+        srcset="../assets/crew/image-douglas-hurley.webp"
+        type="image/webp"
+      />
 
-      <img :src="crewMember.images.png.trim()" :alt="crewMember.name" />
+      <img
+        src="../assets/crew/image-douglas-hurley.png"
+        :alt="crewMember.name"
+      />
     </picture>
     <!-- Dot Indicators to navigate between listings -->
     <DotList @selectDot="changeCrew" class="dot-selector" />
