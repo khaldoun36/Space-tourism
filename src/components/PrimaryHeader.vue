@@ -1,7 +1,7 @@
 <template>
   <header class="primary-header">
     <div class="logo">
-      <img src="public/shared/icon-hamburger.svg" alt="Site logo" />
+      <img src="../../public/shared/logo.svg" alt="Site logo" />
     </div>
     <!-- Mobile Button Start -->
     <button
