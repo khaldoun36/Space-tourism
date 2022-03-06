@@ -7,13 +7,11 @@
     </h1>
     <!-- Destination Image -->
     <picture class="destination-image">
-      <source
-        :srcset="`../../public/destination/image-${destination.name.toLocaleLowerCase()}.webp`"
-        type="image/webp"
-      />
+      <source :srcset="destination.images.webp" type="image/webp" />
+      <!-- `../../public/destination/image-${destination.name.toLocaleLowerCase()}.webp` -->
 
       <img
-        :src="`../../public/destination/image-${destination.name.toLocaleLowerCase()}.png`"
+        :src="destination.images.png"
         :alt="`the ${destination.name.toLocaleLowerCase()}`"
       />
     </picture>
